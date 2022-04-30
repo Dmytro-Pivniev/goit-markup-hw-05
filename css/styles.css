@@ -106,6 +106,7 @@ img {
 }
 
 .header-nav-links > .link {
+  display: flex;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -131,6 +132,20 @@ img {
 .header-nav-links .link:focus {
   background-color: var(--primary-white-color);
   color: var(--accent-color);
+}
+
+.header-nav-links::after {
+  display: block;
+  content: '';
+  height: 4px;
+  background-color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav-links:hover:after,
+.header-nav-links:focus:after {
+  width: 100%;
+  visibility: inherit;
 }
 
 .header-contacts {
